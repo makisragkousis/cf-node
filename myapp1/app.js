@@ -27,10 +27,10 @@ app.get("/user", (req, res) => {
 });
 
 app.get("/user/:name/:surname", (req, res) => {
-  let query = req.params;
+  let params = req.params;
   console.log("Path >>>", query);
-  let name = query.name;
-  let surname = query.surname;
+  let name = params.name;
+  let surname = params.surname;
   res.send("User page: " + name + ", " + surname);
 });
 
